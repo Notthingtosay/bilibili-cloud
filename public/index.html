@@ -191,7 +191,7 @@
 
             const words = Object.entries(freq)
                 .sort((a, b) => b[1] - a[1])
-                .slice(0, 60)
+                .slice(0, 15)
                 .map(([text, count]) => ({ 
                     text, 
                     count, 
@@ -322,4 +322,5 @@
         }
     </script>
 </body>
+
 </html>
