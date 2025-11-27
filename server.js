@@ -67,9 +67,9 @@ app.get('/api/dm', async (req, res) => {
 });
 
 // 启动服务
-app.listen(PORT, () => {
+// 🟢 修改点：增加 '0.0.0.0' 参数，强制监听所有网卡
+app.listen(PORT, '0.0.0.0', () => {
     console.log(`\n✅ 服务已启动！`);
     console.log(`👉 监听端口: ${PORT}`); 
-    // 注意：在云端部署时，localhost 这个地址你是访问不到的，云平台会给你一个新的网址
     console.log(`👉 本地测试请访问: http://localhost:${PORT}\n`);
 });
